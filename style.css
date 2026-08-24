@@ -1,0 +1,163 @@
+:root{
+    --main-font:"Nunito Sans", sans-serif;
+    --header-font:"Montserrat", sans-serif;
+    --main-color:#E65F78;
+}
+html{
+    scroll-padding-top: 64px;
+}
+body{
+    font-family: var(--main-font);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--header-font);
+}
+.text-color{
+    color: var(--main-color);
+}
+.bg-color{
+    background-color: var(--main-color);
+}
+/* NavBar Customization */
+.navbar{
+    font-weight: 800;
+    --bs-navbar-brand-color:var(--main-color);
+    --bs-navbar-brand-font-size: 1.60rem;
+    --bs-navbar-active-color:var(--main-color);
+    --bs-navbar-brand-hover-color:var(--main-color);
+    --bs-navbar-hover-color:var(--main-color);
+}
+/* .................................................................... */
+/* home-section */
+#home{
+    background: linear-gradient( to left , rgb(0, 0, 0,0.7) , rgb(0, 0, 0,0.7)) , url(imgs/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    h1{
+        font-size: 64px;
+        color: var(--main-color);
+        &::after{
+            content: "";
+            animation: header-animation 3s infinite;
+        }
+    }
+    .btn{
+        &:hover{
+            color: black !important;
+            background-color: white;
+        }
+    }
+    .shape{
+        border: 1px white solid;
+        width: 40px;
+        height: 80px;
+        border-radius: 24px;
+        position:absolute;
+        bottom: 5%;
+        animation: updown 0.8s infinite;
+        &::after{
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}
+/* ....................................................................... */
+.setting{
+    background-color: var(--main-color);
+}
+/* ......................................................................... */
+@keyframes header-animation {
+  0% {content: "|";}
+  3% {content: "D|";}
+  5% {content: "De|";}
+  7% {content: "Dev|";}
+  10% {content: "Deve|";}
+  13% {content: "Devel|";}
+  15% {content: "Develo|";}
+  17% {content: "Develop|";}
+  20% {content: "Develop|";}
+  24% {content: "Develope|";}
+  25% {content: "Develope|";}
+  27% {content: "Developer|";}
+  30% {content: "Developer|";}
+  32% {content: "Developer|";}
+  35% {content: "Develope|";}
+  37% {content: "Develope|";}
+  40% {content: "Develop|";}
+  42% {content: "Devel|";}
+  45% {content: "Deve|";}
+  47% {content: "Dev|";}
+  50% {content: "De|";}
+  52% {content: "Des|";}
+  55% {content: "Desi|";}
+  57% {content: "Desig|";}
+  60% {content: "Design|";}
+  62% {content: "Designe|";}
+  65% {content: "Designer|";}
+  67% {content: "Designer|";}
+  70% {content: "Designe|";}
+  72% {content: "Design|";}
+  75% {content: "Desig|";}
+  77% {content: "Desi|";}
+  80% {content: "Des|";}
+  82% {content: "De|";}
+  85% {content: "Dev|";}
+  87% {content: "Deve|";}
+  90% {content: "Devel|";}
+  92% {content: "Develo|";}
+  95% {content: "Develop|";}
+  97% {content: "Develope|";}
+  100% {content: "Developer|";}
+}
+
+
+@keyframes updown {
+    0%{
+        bottom: 20px;
+    }
+    25%{
+        bottom: 30px;
+    }
+    50%{
+        bottom: 35px;
+    }
+    75%{
+        bottom: 38px;
+    }
+    100%{
+        bottom:42px;
+    }
+}
+/* ..................................................................................... */
+.carousel-indicators [data-bs-target]{
+    background-color:var(--main-color)
+}
+/* ..................................................................................... */
+.nav-pills{
+    --bs-nav-pills-border-radius: 32px;
+    --bs-nav-pills-link-active-color: white;
+    --bs-nav-pills-link-active-bg: var(--main-color);
+}
+.nav{
+    --bs-nav-link-color:var(--main-color);
+    --bs-nav-link-hover-color:var(--main-color);
+}
+.pics-container .one{
+    width: 32%;
+}
+.pics-container .two{
+    width: 32%;
+}
+.pics-container .three{
+    width: 32%;
+}
